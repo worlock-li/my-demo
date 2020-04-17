@@ -1,0 +1,57 @@
+.main-div {
+    background-color: #7f90904f;
+    width: 98%;
+    height: 601px;
+    margin-left: 14px;
+    margin-top: 10px;
+    border-radius: 9px;
+}
+
+.main-div > input {
+    width: 30.2%;
+    margin-left: 300px;
+    margin-top: -28px;
+    border-radius: 4px;
+    border: 1px solid #7ad1e4;
+}
+
+.main-div select {
+    width: 30%;
+    margin-left: 300px;
+    border-radius: 4px;
+    margin-top: -28px;
+    border: 1px solid #7ad1e4;
+}
+
+.main-div li {
+    margin-left: 176px;
+    padding-top: 40px;
+    list-style: none;
+    font-size: 16px;
+    font-family: unset;
+    letter-spacing: 3px;
+}
+
+.rk-date {
+    width: 355px;
+    height: 34px;
+    border-radius: 4px;
+    border: 1px solid #7ad1e4;
+    outline: none;
+    position: absolute;
+}
+
+.main-div textarea {
+    width: 590px;
+    margin-left: 298px;
+    margin-top: -29px;
+    border: 1px solid #7ad1e4;
+}
+
+.max-num{
+    position: absolute;
+    left: 575px;
+    top: 183px;
+    font-size: 12px;
+    color: #575761;
+}

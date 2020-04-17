@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品入库</title>
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!--<script src="../plugins/jQueryUI/jquery-ui.min.js"></script>-->
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../plugins/adminLTE/js/app.min.js"></script>
+    <script src="../plugins/angularjs/angular.min.js"></script>
+    <link rel="stylesheet" href="../css/pages/warehousing.css">
+    <script src="../js/pages/outStock.js"></script>
+</head>
+<body ng-app="wm" ng-controller="outStockController" ng-init="findCK()">
+
+<div class="main-div">
+
+    <li>出库仓库:</li>
+    <select class="form-control" ng-model="address" ng-change="selectGoods()">
+        <option value="" selected >选择仓库</option>
+        <option ng-repeat="repository in repositorys">{{repository.address}}</option>
+    </select>
+
+    <li>商品选择:</li>
+    <select class="form-control" style="width: 30%; margin-left: 300px; margin-top: -34px;" ng-model="goodsName" ng-change="findMaxNum()">
+        <option value="" selected id ="selectTip">选择商品</option>
+        <option ng-repeat="goods in goodss">{{goods.goods_name}}</option>
+
+    </select>
+
+    <li>出库数量:</li>
+    <input type="text" class="form-control" id="goodsNum" placeholder="输入数字" ng-model="goodsNum" ng-change="numYz()">
+    <span class="max-num">最大：<input ng-model="goodsMxaNum" style="border: 0px; width: 30px; outline: none" readonly="readonly"/></span>
+
+    <li>出库时间:</li>
+    <input type='date' style="width: 29.5%;" class="rk-date" ng-model="rcTime" />
+
+    <li>供应商:</li>
+    <select class="form-control" ng-model="supplier">
+        <option value="" selected >选择供应商</option>
+        <option ng-repeat="supplier in suppliers">{{supplier.name}}</option>
+    </select>
+
+    <li>工作人员:</li>
+    <input type="text" class="form-control" ng-model="username" readonly="readonly" >
+
+    <li style="margin-left: 213px;">备注:</li>
+    <textarea class="form-control" rows="3" ng-model="beiZhu"></textarea>
+
+    <button type="button" class="btn btn-primary" style="margin-left: 257px; margin-top: 40px;" ng-click="sureOutStock()">提交</button>
+    <button type="button" class="btn btn-primary" style="margin-left: 36px; margin-top: 38px;" ng-click="refresh()">重置</button>
+
+</div>
+
+</body>
+</html>

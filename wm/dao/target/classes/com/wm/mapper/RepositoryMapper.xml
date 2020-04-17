@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="uTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wm.mapper.RepositoryMapper">
+
+    <insert id="add">
+        insert into repository(address, capacity, admin_id, status, create_time) values(#{0}, #{1}, #{2}, #{3}, now())
+    </insert>
+
+    <update id="update">
+        update repository set address = #{0}, capacity = #{1}, admin_id = #{2}, status = #{3}, update_time = now()  where id = #{4}
+    </update>
+
+    <delete id="delete">
+        delete from repository where id = #{0}
+    </delete>
+
+    <select id="searchByAddress" resultType="com.wm.pojo.Repository">
+        select repository.id, address, capacity, username, STATUS from repository, wm_admin where repository.admin_id = wm_admin.id and address like #{0}
+    </select>
+
+    <select id="findAll" resultType="com.wm.pojo.Repository">
+        SELECT repository.id, address, capacity, username, STATUS FROM repository, wm_admin WHERE repository.admin_id = wm_admin.id
+    </select>
+
+    <select id="findOneById" resultType="com.wm.pojo.Repository">
+        SELECT repository.id, address, capacity, username, STATUS FROM repository, wm_admin WHERE repository.admin_id = wm_admin.id and repository.id = #{0}
+    </select>
+
+
+</mapper>

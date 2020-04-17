@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 页面meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>后台管理系统</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Css files -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/climacons-font.css" rel="stylesheet">
+    <link href="../assets/plugins/xcharts/css/xcharts.min.css" rel=" stylesheet">
+    <link href="../assets/plugins/fullcalendar/css/fullcalendar.css" rel="stylesheet">
+    <link href="../assets/plugins/morris/css/morris.css" rel="stylesheet">
+    <link href="../assets/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="../assets/plugins/jvectormap/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <link href="../assets/css/style.min.css" rel="stylesheet">
+    <link href="../assets/css/add-ons.min.css" rel="stylesheet">
+    <link href="../css/pages/home.css" rel="stylesheet">
+    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+    </script>
+    <script src="../plugins/angularjs/angular.min.js"></script>
+    <script src="../plugins/angularjs/pagination.js"></script>
+    <script src="../js/pages/home.js"></script>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini" ng-app="wm" ng-controller="homeController" ng-init="findRecord()">
+    <div class="col-lg-4 col-md-12" style="width: 43%; margin-top: 11px; margin-left: 16px;">
+        <div class="panel panel-default calendar">
+            <div class="calendar-small"></div>
+        </div>
+    </div><!--/col-->
+
+    <div class="col-lg-6 col-md-12" style="width: 54%; margin-top: 12px;">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 style="margin-top: 7px;"><i class="fa fa-spinner red"></i><strong>最近记录</strong></h2>
+                <div class="panel-actions">
+                    <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+                    <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                    <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+                </div>
+                <ul class="nav nav-tabs" id="recent" style="display: none">
+                    <li><a href="index.html#tickets">Tickets</a></li>
+                </ul>
+            </div>
+            <div class="panel-body" style="padding: 2px">
+                <div class="tab-content">
+                    <div class="tab-pane" id="tickets">
+                        <table class="table bootstrap-datatable datatable small-font">
+                            <thead>
+                            <tr>
+                                <th>操作</th>
+                                <th>时间</th>
+                                <th>商品名称</th>
+                                <th>操作人</th>
+                                <th>数量</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr style="height: 40px;" ng-repeat="record in list">
+                                <td><span class="label label-success">{{record.operation}}</span></td>
+                                <td>{{record.change_time}}</td>
+                                <td>{{record.goods_name}}</td>
+                                <td>{{record.work_man}}</td>
+                                <td><b>{{record.num}}</b></td>
+                            </tr>
+
+                            <tr style="height: 21px; background-color: #edf2f5;">
+                                <td><span class="label label-success"></span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b></b></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!--/col-->
+
+    <div class="repository-info">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 style="margin-top: 7px;"><i class="fa fa-spinner red"></i><strong>仓库信息</strong></h2>
+                <div class="panel-actions">
+                    <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+                    <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                    <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+                </div>
+
+            </div>
+            <div class="panel-body" style="padding: 0px;">
+                <table class="table table-hover" style="background-color: white;">
+                <tbody>
+                <tr class="re-hand">
+                    <th class="text-center">仓库id</th>
+                    <th class="text-center">管理员</th>
+                    <th class="text-center">地址</th>
+                    <th class="text-center">库存容量</th>
+                </tr>
+                <tr ng-repeat="repository in repositoryList">
+                    <td class="text-center">{{repository.id}}</td>
+                    <td class="text-center">{{repository.username}}</td>
+                    <td class="text-center">{{repository.address}}</td>
+                    <td class="text-center">{{repository.capacity}}</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- start: JavaScript-->
+    <!--[if !IE]>-->
+
+    <script src="../assets/js/jquery-2.1.1.min.js"></script>
+
+    <!--<![endif]-->
+
+    <!--[if IE]>
+
+    <![endif]-->
+
+    <!--[if !IE]>-->
+
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+    </script>
+
+    <!--<![endif]-->
+
+    <!--[if IE]>
+
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+    </script>
+
+    <![endif]-->
+    <script src="../assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+
+    <!-- page scripts -->
+    <script src="../assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../assets/plugins/touchpunch/jquery.ui.touch-punch.min.js"></script>
+    <script src="../assets/plugins/moment/moment.min.js"></script>
+    <script src="../assets/plugins/fullcalendar/js/fullcalendar.min.js"></script>
+    <![endif]-->
+    <script src="../assets/plugins/flot/jquery.flot.min.js"></script>
+    <script src="../assets/plugins/flot/jquery.flot.pie.min.js"></script>
+    <script src="../assets/plugins/flot/jquery.flot.stack.min.js"></script>
+    <script src="../assets/plugins/flot/jquery.flot.resize.min.js"></script>
+    <script src="../assets/plugins/flot/jquery.flot.time.min.js"></script>
+    <script src="../assets/plugins/flot/jquery.flot.spline.min.js"></script>
+    <script src="../assets/plugins/xcharts/js/xcharts.min.js"></script>
+    <script src="../assets/plugins/autosize/jquery.autosize.min.js"></script>
+    <script src="../assets/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="../assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script src="../assets/plugins/raphael/raphael.min.js"></script>
+    <script src="../assets/plugins/morris/js/morris.min.js"></script>
+    <script src="../assets/plugins/jvectormap/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="../assets/plugins/jvectormap/js/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../assets/plugins/jvectormap/js/gdp-data.js"></script>
+    <script src="../assets/plugins/gauge/gauge.min.js"></script>
+
+
+    <!-- theme scripts -->
+
+    <script src="../assets/js/jquery.mmenu.min.js"></script>
+    <script src="../assets/js/core.min.js"></script>
+    <script src="../assets/plugins/d3/d3.min.js"></script>
+
+    <!-- inline scripts related to this page -->
+    <script src="../assets/js/pages/index.js"></script>
+
+    <!-- end: JavaScript-->
+</body>
+
+</html>

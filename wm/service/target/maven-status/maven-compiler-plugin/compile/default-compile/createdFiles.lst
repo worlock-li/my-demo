@@ -1,0 +1,8 @@
+com\wm\service\impl\SupplierServiceImpl.class
+com\wm\service\impl\RepositoryServiceImpl.class
+com\wm\service\impl\UserServiceImpl.class
+com\wm\service\impl\GoodsServiceImpl.class
+com\wm\service\impl\CustomerServiceImpl.class
+com\wm\service\impl\AdminInfoServiceImpl.class
+com\wm\service\impl\GoodsTypeServiceImpl.class
+com\wm\service\impl\RecordServiceImpl.class

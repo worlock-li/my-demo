@@ -1,0 +1,8 @@
+com\wm\service\SupplierService.class
+com\wm\service\UserService.class
+com\wm\service\CustomerService.class
+com\wm\service\RecordService.class
+com\wm\service\RepositoryService.class
+com\wm\service\GoodsTypeService.class
+com\wm\service\GoodsService.class
+com\wm\service\AdminInfoService.class

@@ -1,0 +1,11 @@
+com\wm\pojo\GoodsType.class
+com\wm\pojo\Supplier.class
+com\wm\pojo\Customer.class
+com\wm\pojo\Repository.class
+com\wm\pojo\PageResult.class
+com\wm\pojo\Record.class
+com\wm\pojo\Goods.class
+com\wm\pojo\Result.class
+com\wm\pojo\RepositoryDetails.class
+com\wm\pojo\WmAdmin.class
+com\wm\pojo\User.class

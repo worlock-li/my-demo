@@ -1,0 +1,187 @@
+body {
+    margin: 0px;
+}
+
+.kuang {
+    width: 673px;
+    height: 580px;
+    background-color: #0e5780;
+    margin-left: 328px;
+    margin-top: 10px;
+    border-radius: 6px;
+    color: floralwhite;
+}
+
+.main-body {
+    text-align: center;
+    background-color: aliceblue;
+    font-size: 20px;
+    width: 1349px;
+    height: 598px;
+}
+
+.username-div {
+    position: absolute;
+    top: 25px;
+    left: 401px;
+}
+
+.password-div {
+    position: absolute;
+    top: 85px;
+    left: 401px;
+}
+
+.next-password-div {
+    position: absolute;
+    top: 150px;
+    left: 401px;
+}
+
+.phone-num-div {
+    position: absolute;
+    top: 215px;
+    left: 401px;
+}
+
+.email-div {
+    position: absolute;
+    top: 282px;
+    left: 401px;
+}
+
+.address-div {
+    position: absolute;
+    top: 355px;
+    left: 401px;
+}
+
+.yzm {
+    position: absolute;
+    top: 420px;
+    left: 402px;
+}
+
+.regist {
+    position: absolute;
+    top: 500px;
+    left: 566px;
+    width: 440px;
+}
+
+.regist-input {
+    width: 184px;
+    height: 38px;
+    border-radius: 4px;
+    border: none;
+    background: #ff5640;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    left: -29px;
+}
+
+.input {
+    width: 300px;
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    padding-left: 5px;
+    position: absolute;
+    left: 188px;
+}
+
+.select-input {
+    width: 130px;
+    height: 31px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-left: 42px;
+    cursor: pointer;
+}
+
+.select-body {
+    width: 640px;
+}
+
+.username-div label {
+    width: 144px;
+    letter-spacing: 15px;
+    position: absolute;
+    left: -22px;
+    top: 7px;
+}
+
+.password-div label {
+    position: absolute;
+    width: 144px;
+    top: 10px;
+    left: -3px;
+    letter-spacing: 50px;
+}
+
+.next-password-div label {
+    position: absolute;
+    top: 6px;
+    left: -5px;
+    width: 100px;
+    letter-spacing: 3px;
+}
+
+.phone-num-div label {
+    position: absolute;
+    width: 144px;
+    top: 10px;
+    left: -3px;
+    letter-spacing: 50px;
+}
+
+.email-div label {
+    position: absolute;
+    width: 144px;
+    top: 10px;
+    left: -3px;
+    letter-spacing: 50px;
+}
+
+.address-div label {
+    position: absolute;
+    top: 2px;
+    left: -3px;
+    width: 100px;
+    letter-spacing: 3px;
+}
+
+.yzm img {
+    position: absolute;
+    left: 307px;
+    width: 97px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.regist a {
+    position: absolute;
+    left: 267px;
+    top: 15px;
+    font-size: 15px;
+    color: greenyellow;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.regist label {
+    position: absolute;
+    left: 193px;
+    top: 16px;
+    font-size: 15px;
+}
+
+.error-yzm {
+    margin-left: 307px;
+    font-size: 17px;
+    line-height: 40px;
+    font-family: serif;
+    color: #f7a302;;
+}

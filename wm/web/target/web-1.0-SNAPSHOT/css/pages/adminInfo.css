@@ -1,0 +1,53 @@
+.search-by-id {
+    border-radius: 3px;
+    border: 1px solid #a8a5a9;
+    outline: none;
+    padding-left: 5px;
+    height: 33px;
+    margin-top: 3px;
+    margin-right: 4px;
+}
+
+.admin-info-input {
+    display: block;
+    margin-left: 250px;
+    margin-top: -28px;
+    width: 205px;
+    height: 33px;
+    border-radius: 3px;
+    border: 1px solid rgba(113, 108, 108, 0.47);
+    padding-left: 4px;
+    outline: none    ;
+}
+
+.info-title {
+    display: block;
+    margin-top: 11px;
+    margin-left: 166px;
+    font-size: 15px;
+}
+
+.ck-id {
+    width: 111px;
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    margin-right: 17px;
+}
+
+.file-update {
+    margin-left: 252px;
+    margin-top: -23px;
+    padding-bottom: 50px;
+}
+
+.admin-checked {
+    position: absolute;
+    top: 136px;
+    left: 265px;
+    width: 115px;
+    height: 32px;
+    border-radius: 4px;
+    outline: none;
+}
+

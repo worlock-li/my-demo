@@ -1,0 +1,8 @@
+com\wm\mapper\CustomerMapper.class
+com\wm\mapper\RecordMapper.class
+com\wm\mapper\GoodsTypeMapper.class
+com\wm\mapper\SupplierMapper.class
+com\wm\mapper\RepositoryMapper.class
+com\wm\mapper\UserMapper.class
+com\wm\mapper\AdminInfoMapper.class
+com\wm\mapper\GoodsMapper.class

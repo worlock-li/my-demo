@@ -1,0 +1,10 @@
+com\wm\controller\AdminInfoController.class
+com\wm\controller\LoginController.class
+com\wm\controller\SupplierController.class
+com\wm\controller\UserController.class
+com\wm\controller\RecordController.class
+com\wm\controller\RepositoryController.class
+com\wm\controller\CustomerController.class
+com\wm\controller\GoodsTypeController.class
+com\wm\controller\GoodsController.class
+com\wm\service\UserDetailServiceImpl.class

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>供应商信息管理</title>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugins/angularjs/angular.min.js"></script>
+    <script src="../plugins/angularjs/pagination.js"></script>
+    <link rel="stylesheet" href="../plugins/angularjs/pagination.css">
+    <link rel="stylesheet" href="../css/pages/adminInfo.css">
+    <script src="../js/pages/supplier.js"></script>
+</head>
+<body class="hold-transition skin-red sidebar-mini" ng-app="wm" ng-controller="supplierController">
+<!-- .box-body -->
+<div class="box-header with-border">
+    <h3 class="box-title">供应商信息管理</h3>
+</div>
+
+<div class="box-body">
+
+    <!-- 数据表格 -->
+    <div class="table-box">
+
+        <!--工具栏-->
+        <div class="pull-left">
+            <div class="form-group form-inline">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" title="添加供应商" data-toggle="modal" data-target="#addModal" ng-click="pojo={}"><i class="fa fa-file-o"></i> 添加供应商</button>
+                    <button type="button" class="btn btn-default" title="刷新" onclick="window.location.reload();"><i class="fa fa-refresh"></i> 刷新</button>
+                </div>
+            </div>
+        </div>
+        <div class="box-tools pull-right">
+            <div class="has-feedback">
+                <input class="search-by-id" type="text" ng-model="searchInfo" placeholder="请输入供应商名称">
+                <button type="button" class="btn btn-success" title="查询" ng-click="reloadList()"><i class="fa fa-trash-o"></i> 查询</button>
+            </div>
+        </div>
+        <!--工具栏/-->
+
+        <!--数据列表-->
+        <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+            <thead>
+            <tr>
+                <th class="text-center">供应商ID</th>
+                <th class="text-center">供应商名称</th>
+                <th class="text-center">负责人</th>
+                <th class="text-center">电话</th>
+                <th class="text-center">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="text-center" ng-repeat="entity in list">
+                <td>{{entity.id}}</td>
+                <td>{{entity.name}}</td>
+                <td>{{entity.charge_person}}</td>
+                <td>{{entity.phone}}</td>
+                <td class="text-center">
+                    <button type="button" class="btn bg-olive btn-xs" data-toggle="modal" data-target="#addModal" ng-click="findOneById(entity.id)">修改</button>
+                    <button type="button" class="btn btn-danger btn-xs" ng-click = "delete(entity.id)">删除</button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+        <!--数据列表/-->
+    </div>
+    <!-- 数据表格 /-->
+    <tm-pagination conf="paginationConf"></tm-pagination>
+</div>
+
+<!-- 添加、修改 管理员 -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="addModalLabel">添加供应商</h4>
+            </div>
+            <div class="modal-body">
+
+                <span class="info-title" style="margin-left: 150px;">供应商名称:</span>
+                <input type="text" placeholder="供应商名称" class="admin-info-input" ng-model="pojo.name" /><br/>
+
+                <span class="info-title" style="margin-left: 176px;">负责人:</span>
+                <input type="text" placeholder="负责人" class="admin-info-input" ng-model="pojo.charge_person" /><br/>
+
+                <span class="info-title" style="margin-left: 164px;">联系电话:</span>
+                <input type="text" placeholder="联系电话" class="admin-info-input" ng-model="pojo.phone" /><br/>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="sureAdd" ng-model="sureAdd" ng-click = "sureAdd()" >提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--确认删除-->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="deleteModalLabel">确认删除</h4>
+            </div>
+            <div class="modal-body">
+                <img src="../image/sureDelete.jpg" style="width: 46px; margin-left: 24px;">
+                确认删除当前管理员信息吗？
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" style="margin-top: -1px;" class="btn btn-danger" id="sureDelete" data-dismiss="modal" ng-click = "sureDelete()">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="successModal" ng-model="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="successModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+                <img src="../image/success.jpg" style="width: 46px; margin-left: 24px;">
+                更新成功
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

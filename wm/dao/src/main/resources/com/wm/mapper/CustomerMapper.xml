@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="uTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wm.mapper.CustomerMapper">
+
+    <insert id="add">
+        insert into customer(name, charge_person, phone, create_time) values(#{name}, #{charge_person}, #{phone}, now())
+    </insert>
+
+    <update id="update">
+        update customer set name = #{name}, charge_person = #{charge_person}, phone = #{phone} where id = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from customer where id = #{0}
+    </delete>
+
+    <select id="findAll" resultType="com.wm.pojo.Customer">
+        select * from customer
+    </select>
+
+    <select id="searchByName" resultType="com.wm.pojo.Supplier">
+        select * from customer where name like #{0}
+    </select>
+
+    <select id="findOneById" resultType="com.wm.pojo.Customer">
+        select * from customer where id = #{0}
+    </select>
+
+</mapper>

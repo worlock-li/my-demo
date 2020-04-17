@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="uTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wm.mapper.AdminInfoMapper">
+
+    <insert id="add" parameterType="com.wm.pojo.WmAdmin">
+        insert into wm_admin(username, sex, phone, wm_id) values(#{username}, #{sex}, #{phone}, #{wm_id})
+    </insert>
+
+    <update id="update">
+        update wm_admin set username = #{username}, sex = #{sex}, phone = #{phone}, wm_id = #{wm_id} where id = #{id}
+    </update>
+
+    <delete id="deleteAdmin">
+        delete from wm_admin where id = #{0}
+    </delete>
+
+    <select id="findAll" resultType="com.wm.pojo.WmAdmin">
+        select * from wm_admin
+    </select>
+
+    <select id="findOneById" resultType="com.wm.pojo.WmAdmin">
+        select * from wm_admin where id = #{0}
+    </select>
+
+    <select id="searchByUsername" resultType="com.wm.pojo.WmAdmin">
+        select * from wm_admin where username like #{0}
+    </select>
+
+</mapper>

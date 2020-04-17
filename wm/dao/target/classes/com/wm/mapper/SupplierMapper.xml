@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="uTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wm.mapper.SupplierMapper">
+
+    <insert id="add">
+        insert into supplier(name, charge_person, phone, create_time) values(#{name}, #{charge_person}, #{phone}, now())
+    </insert>
+
+    <update id="update">
+        update supplier set name = #{name}, charge_person = #{charge_person}, phone = #{phone} where id = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from supplier where id = #{0}
+    </delete>
+
+    <select id="findAll" resultType="com.wm.pojo.Supplier">
+        select * from supplier
+    </select>
+
+        <select id="searchByName" resultType="com.wm.pojo.Supplier">
+        select * from supplier where name like #{0}
+    </select>
+
+    <select id="findOneById" resultType="com.wm.pojo.Supplier">
+        select * from supplier where id = #{0}
+    </select>
+
+
+</mapper>

@@ -1,0 +1,97 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #fff;
+}
+.ui.grid {
+    margin: 0;
+}
+
+.header-row1 {
+    height: 100px;
+}
+
+.back {
+    background-color: #0e8c8c;
+}
+
+.login-header {
+    background-color: #48c5f5;
+    width: 503px;
+    height: 560px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+#msg{
+    text-align: center;
+}
+
+.mainImg {
+    border: 0;
+    height: 130px;
+    position: absolute;
+    top: 76px;
+    left: 79px;
+}
+
+#VerCode {
+    display: block;
+    width: 191.5px;
+    margin-left: 452px;
+    margin-top: 43px;
+}
+
+.forget-password {
+    position: absolute;
+    top: 293px;
+    left: 832px;
+    color: #7dff87;
+    cursor: pointer;
+}
+
+.line {
+    display: block;
+    position: absolute;
+    top: 312px;
+    left: 409px;
+    z-index: 9999;
+    width: 288px;
+}
+
+.error-username-password {
+    display: none;
+    position: absolute;
+    left: 465px;
+    top: 39px;
+    margin-bottom: -11px;
+    background-color: #e4dfe0;
+    color: red;
+    border-radius: 4px;
+    width: 363px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.title-name {
+    display: block;
+    color: lightyellow;
+    font-family: monospace;
+    position: absolute;
+    top: 235px;
+    left: 76px;
+    font-size: 20px;
+}
+
+.ui.white {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.ui.login-div {
+    margin: 30px 0 0 0;
+}

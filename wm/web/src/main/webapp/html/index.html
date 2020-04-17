@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 页面meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>多地仓储综合管理系统</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="../plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!--<script src="../plugins/jQueryUI/jquery-ui.min.js"></script>-->
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../plugins/adminLTE/js/app.min.js"></script>
+    <script src="../plugins/angularjs/angular.min.js"></script>
+
+    <script src="../js/index.js"></script>
+
+    <script type="text/javascript">
+        function SetIFrameHeight(){
+            var iframeid=document.getElementById("iframe"); //iframe id
+            if (document.getElementById){
+                iframeid.height =document.documentElement.clientHeight;
+            }
+        }
+
+    </script>
+
+</head>
+
+<body class="hold-transition skin-green sidebar-mini" ng-app="wm" ng-controller="indexController" ng-init="getName()">
+
+<div class="wrapper">
+
+    <!-- 页面头部 -->
+    <header class="main-header" >
+        <!-- Logo -->
+        <a class="logo" style="background-color:#181d20 ">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>仓库管理</b></span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg" >
+                <span class="glyphicon glyphicon-home"></span>
+                <b style="font-weight: 700; font-size: 20px; font-family: monospace;">多地仓储综合管理系统</b>
+            </span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" style="background-color:#748b9836;">
+            <!-- Sidebar toggle button-->
+
+
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-top: 35px;">
+
+                            <span class="hidden-xs" style="line-height: 10px;">
+                                <img src="../image/user.png" style="display: block; position: absolute; top: 27px; left: -24px; width: 29px;">
+                                {{username}}</span>
+                        </a>
+                        <ul class="dropdown-menu" style="border: 2px double #8baae4;">
+                            <li class="dropdown-menu-header" style="height: 50px; border-bottom: 1px solid #b8b8ce;">
+                                <strong style="margin-left: 19px; line-height: 51px; font-size: 16px;">选择</strong>
+                            </li>
+                            <li style="border-bottom: 1px solid #c2c3d6; height: 40px; cursor: pointer" ng-click = "changePassword()"><a style="margin-top: 14px;"><i class="fa fa-user"></i> 修改密码</a></li>
+                            <li style="border-bottom: 1px solid #c2c3d6; height: 40px;"><a href="login.html" style="margin-top: 14px;"><i class="fa fa-sign-out"></i> 注销</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- 页面头部 /-->
+
+    <!-- 修改密码 Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">修改密码</h4>
+                </div>
+                <div id="errorMessage" style=" display:none; background-color: #e6c2c8; width: 213px; height: 24px; line-height: 24px; text-align: center;margin-left: 211px;margin-top: 15px;margin-bottom: -18px;border-radius: 4px;">
+                    <span id="errorMessageText">两次密码不一致</span>
+                </div>
+                <div class="modal-body">
+                    <input type="text" style="margin: 16px; height: 35px; width: 326px; border-radius: 4px; border: 1px solid #dddddd; padding-left: 8px; margin-left: 140px; outline: none" placeholder="请输入旧密码" id="oldPassword" ng-model = "oldPassword"><br/>
+                    <input type="text" style="margin: 16px; height: 35px; width: 326px; border-radius: 4px; border: 1px solid #dddddd; padding-left: 8px; margin-left: 140px; outline: none" placeholder="请输入新密码" id="newPassword" ng-model = "newPassword"><br/>
+                    <input type="text" style="margin: 16px; height: 35px; width: 326px; border-radius: 4px; border: 1px solid #dddddd; padding-left: 8px; margin-left: 140px; outline: none" placeholder="请再次输入新密码" id="nextNewPassword" ng-model = "nextNewPassword">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="sureChangePassword" ng-click="sureChangePassword()">确认修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航侧栏 -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu"  >
+                <li class="header" style="background-color:#181d20; border-top: solid 1px #7c8386; border-bottom: solid 1px #7c8386">菜单</li>
+                <li id="admin-index" style="background-color: #181d20"><a href="index.html"><i class="fa fa-dashboard"></i> <span>首页</span></a></li>
+
+                <!-- 菜单 -->
+                <li class="treeview" style="border-top: solid 1px #7c8386; background-color:#181d20; border-bottom: solid 1px #7c8386">
+                    <a href="#">
+                        <i class="fa fa-folder"></i>
+                        <span>库存管理</span>
+                        <span class="pull-right-container">
+				       			<i class="fa fa-angle-left pull-right"></i>
+				   		 	</span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li>
+                            <a href="repository.html" target="iframe">
+                                <i class="fa fa-circle-o"></i>库存信息管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="record.html" target="iframe">
+                                <i class="fa fa-circle-o"></i>出入库记录
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview" style="background-color:#181d20;">
+                    <a href="#">
+                        <i class="fa fa-folder"></i>
+                        <span>出入库管理</span>
+                        <span class="pull-right-container">
+				       			<i class="fa fa-angle-left pull-right"></i>
+				   		 	</span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li>
+                            <a href="inStock.html" target="iframe">
+                                <i class="fa fa-circle-o"></i>货物入库
+                            </a>
+                        </li>
+                        <li>
+                            <a href="outStock.html" target="iframe">
+                                <i class="fa fa-circle-o"></i>货物出库
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="treeview" style="background-color:#181d20; border-top: solid 1px #7c8386; border-bottom: solid 1px #7c8386">
+                    <a href="#">
+                        <i class="fa fa-folder"></i>
+                        <span>人员管理</span>
+                        <span class="pull-right-container">
+				       			<i class="fa fa-angle-left pull-right"></i>
+				   		 	</span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li>
+                            <a href="adminInfo.html" target="iframe">
+                                <i class="fa fa-circle-o"></i>仓库管理员管理
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- 菜单 /-->
+
+                <li class="treeview" style="background-color:rgba(24,29,32,0.88);">
+                    <a href="#">
+                        <i class="fa fa-folder"></i>
+                        <span>基础数据</span>
+                        <span class="pull-right-container">
+				       			<i class="fa fa-angle-left pull-right"></i>
+				   		 	</span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li>
+                            <a href="supplierInfo.html" target="iframe">
+                                <i class="fa fa-circle-o"></i>供应商信息管理
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="customer.html" target="iframe">
+                                <i class="fa fa-circle-o"></i>客户信息管理
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="goodsInfo.html" target="iframe">
+                                <i class="fa fa-circle-o"></i>货物信息管理
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="treeview" style="background-color:#181d20; border-top: solid 1px #7c8386; border-bottom: solid 1px #7c8386">
+                    <a href="#">
+                        <i class="fa fa-folder"></i>
+                        <span>系统维护</span>
+                        <span class="pull-right-container">
+				       			<i class="fa fa-angle-left pull-right"></i>
+				   		 	</span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li>
+                            <a href="content_category.html" target="iframe" data-toggle="modal" data-target="#myModal">
+                                <i class="fa fa-circle-o"></i>更改密码
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- 导航侧栏 /-->
+
+    <!-- 内容区域 -->
+    <div class="content-wrapper">
+        <iframe width="100%" id="iframe" name="iframe"	onload="SetIFrameHeight()"
+                frameborder="0" src="home.html"></iframe>
+
+    </div>
+    <!-- 内容区域 /-->
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+body {
+    margin: 0px;
+}
+
+.header {
+    background-color: #0e5780;
+    width: 100%;
+    height: 60px;
+}
+
+.main-body {
+    width: 100%;
+    height: 545px;
+}
+.left {
+    background-color: #157fff;
+    width: 20%;
+    height: 567px;
+}
+
+.right {
+    background-color: #6ad6ff;
+    width: 80%;
+    height: 104%;
+    margin-top: -567px;
+    margin-left: 20%;
+}
+
+.error-password {
+    display: block;
+}
