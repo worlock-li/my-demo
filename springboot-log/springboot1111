@@ -1,0 +1,8 @@
+2020-04-18 12:37:40.611  INFO 6444 --- [main] c.s.demo.DemoApplicationTests            : Starting DemoApplicationTests on DESKTOP-3LHGAFH with PID 6444 (started by 李晓飞 in C:\Users\李晓飞\Desktop\idea-workspace\springboot-log)
+2020-04-18 12:37:40.611  INFO 6444 --- [main] c.s.demo.DemoApplicationTests            : No active profile set, falling back to default profiles: default
+2020-04-18 12:37:45.736  INFO 6444 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-18 12:37:46.683  INFO 6444 --- [main] c.s.demo.DemoApplicationTests            : Started DemoApplicationTests in 7.674 seconds (JVM running for 11.853)
+2020-04-18 12:37:47.517  INFO 6444 --- [main] c.s.demo.DemoApplicationTests            : 这是info日志记录
+2020-04-18 12:37:47.517  WARN 6444 --- [main] c.s.demo.DemoApplicationTests            : 这是warn日志记录
+2020-04-18 12:37:47.517 ERROR 6444 --- [main] c.s.demo.DemoApplicationTests            : 这是error日志记录
+2020-04-18 12:37:47.580  INFO 6444 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="81b8733d-cf71-4ac9-8398-aad9d002430b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\repository" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ahJNBBJmScZSUXluuUQEQHuTOH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\李晓飞\Desktop\idea-workspace\springboot-log\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.DemoApplicationTests.contextLoads">
+    <configuration name="DemoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-log" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springboot_stady.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.springboot_stady.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.springboot_stady.demo.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-log" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.springboot_stady.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DemoApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81b8733d-cf71-4ac9-8398-aad9d002430b" name="Default Changelist" comment="" />
+      <created>1587181849578</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587181849578</updated>
+      <workItem from="1587181856493" duration="6379000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587194005140">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587194005140" />
+    <state width="1323" height="519" key="GridCell.Tab.0.bottom" timestamp="1587193923488">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="519" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587193923488" />
+    <state width="1323" height="519" key="GridCell.Tab.0.center" timestamp="1587193923488">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="519" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587193923488" />
+    <state width="1323" height="519" key="GridCell.Tab.0.left" timestamp="1587193923487">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="519" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587193923487" />
+    <state width="1323" height="519" key="GridCell.Tab.0.right" timestamp="1587193923488">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="519" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587193923488" />
+  </component>
+</project>
