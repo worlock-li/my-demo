@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xl.myprojectvue.mapper.UserMapper" >
+    <resultMap id="BaseResultMap" type="com.xl.myprojectvue.pojo.User">
+        <id property="userId" column="user_id" />
+        <id property="username" column="user_name" />
+        <id property="userSex" column="user_sex" />
+        <id property="userAge" column="user_age" />
+        <id property="userBirthday" column="user_birthday" />
+        <id property="userDepartment" column="user_department" />
+        <id property="createTime" column="create_time" />
+        <id property="updateTime" column="update_time" />
+        <id property="createBy" column="create_by" />
+        <id property="updateBy" column="update_by" />
+        <id property="version" column="version" />
+        <id property="deleted" column="deleted" />
+    </resultMap>
+    <!-- 查询出来的数据 通过 resultMap="BaseResultMap" 映射到实体类中 -->
+    <select id="getUserById" resultType="com.xl.myprojectvue.pojo.User" resultMap="BaseResultMap" >
+        select * from user where user_id = #{id}
+    </select>
+
+    <select id="findAll" resultType="com.xl.myprojectvue.pojo.User" resultMap="BaseResultMap">
+        select * from user
+    </select>
+
+
+</mapper>

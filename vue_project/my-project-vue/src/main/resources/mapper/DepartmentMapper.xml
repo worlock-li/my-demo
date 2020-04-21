@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xl.myprojectvue.mapper.DepartmentMapper" >
+    <!--配置实体类与表中的字段对应-->
+    <resultMap id="BaseResultMap" type="com.xl.myprojectvue.pojo.Department">
+        <id property="id" column="id" />
+        <id property="name" column="name" />
+    </resultMap>
+
+    <insert id="add">
+        insert into department (id, name) values (#{id}, #{name})
+    </insert>
+
+    <update id="update">
+        update department set name = #{name} where id = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from department where id = #{id}
+    </delete>
+
+    <select id="findAll" resultType="com.xl.myprojectvue.pojo.Department">
+        select id, name from department
+    </select>
+
+    <select id="getById" resultType="com.xl.myprojectvue.pojo.Department">
+        select id, name from department where id = #{id}
+    </select>
+
+    <select id="searchByName" resultType="com.xl.myprojectvue.pojo.Department">
+        select id, name from department where name like #{name}
+    </select>
+</mapper>
