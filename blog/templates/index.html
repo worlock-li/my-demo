@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博客首页</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <link rel="stylesheet" href="../static/css/mystyle.css" >
+</head>
+<body>
+  <!-- style="background-image: url(https://unsplash.it/1349/292?image=1073);" -->
+  <!-- 导航部分 -->
+  <!-- inverted 反色 -->
+  <nav class="ui teal attached segment top-nav">
+
+    <div class="ui secondary stackable menu m-center">
+      <!-- <h2 class="ui teal header item">博客</h2> -->
+      <img src="../static/images/blog(1).png" alt="" class="ui rounded image logo-img">
+      <a class="active control-hide active item m-monile-hide"><i class="home icon"></i> 首页</a>
+      <a class="control-hide item m-monile-hide"><i class="list layout icon"></i> 分类</a>
+      <a class="control-hide item m-monile-hide"><i class="tag icon"></i> 标签</a>
+      <a class="control-hide item m-monile-hide"><i class="clone icon"></i> 归档</a>
+      <a class="control-hide item m-monile-hide"><i class="edit icon"></i> 发布博客</a>
+      <a class="control-hide item m-monile-hide"><i class="user icon"></i> 关于我</a>
+      <!-- 搜索栏 -->
+      <div class="control-hide right menu m-monile-hide">
+        <div class="item">
+          <div class="ui icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" id="control-hide" class="ui icon button m-hide-position">
+      <i class="server icon"></i>
+    </a>
+  </nav>
+
+  <!-- 中间部分 -->
+  <div class="m-padded-tb-three">
+    <div class="ui container">
+      <div class="ui stackable grid">
+        <!-- 左边的内容 占 7 格 -->
+        <div class="eleven wide column">
+
+          <!-- 头部 -->
+          <div class="ui top attached segment">
+            <!-- middle aligned 文字上下居中 -->
+            <div class="ui middle aligned two column grid">
+              <div class="column">
+                <h3 class="ui teal header">博客列表</h3>
+              </div>
+              <div class="right aligned column">
+                共<h3 class="ui orange header m-inline-block">&nbsp;14&nbsp;</h3>篇
+              </div>
+            </div>
+          </div>
+
+          <!-- 列表部分， 循环主体 -->
+          <!-- attached: 将两个div连接起来 -->
+          <div class="ui attached segment">
+            <div class="ui padded vertical segment m-padded-tb-two">
+              <!-- 分16格 -->
+              <div class="ui mobile reversed stackable grid">
+                <!-- 列表中左边的文字， 占 11 格 -->
+                <div class="eleven wide column">
+                  <h3 class="ui header"> Spring Boot的消息事件机制 </h3>
+                  <p class="m-text">Spring Boot自带了消息机制，可以让我们在一个地方发布消息，多个地方同时接收消息并处理消息，当然这是在同一个JVM内存下进行的，不同的进程还需要使用MQ来实现。</p>
+                  <!-- 下面的作者、日期等显示， 也用 grid 来实现 -->
+                  <div class="ui grid">
+                    <!-- 左边占11格 -->
+                    <div class="eleven wide column">
+
+                      <!-- horizontal 表示竖着的ui列表 -->
+                      <div class="ui horizontal link list">
+
+                        <div class="item">
+                          <img src="https://unsplash.it/100/100?image=0" alt="" class="ui avatar image">
+                          <div class="content"><a href="#" class="header">jimLi</a></div>
+                        </div>
+                        <div class="item">
+                          <span class="m-text-size"><i class="calendar icon"></i>2020-4-25</span>
+                        </div>
+                        <div class="item">
+                          <span class="m-text-size"><i class="eye icon"></i>100</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="right aligned five wide column">
+                      <a href="#" target="_blank" class="ui teal basic label m-padded-mini">认知升级</a>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- 列表右边的图片占5格 -->
+                <div class="five wide column">
+                  <a href="#" target="_blank"></a>
+                  <!-- 从网站上面获取的图片地址， 图片大小为 800×400 -->
+                  <img src="https://unsplash.it/800/450?image=0" alt="" class="ui rounded image">
+                </div>
+              </div>
+            </div>
+          </div> 
+          <!-- 循环一 -->
+          <div class="ui attached segment">
+            <div class="ui padded vertical segment m-padded-tb-two">
+              <!-- 分16格 -->
+              <div class="ui mobile reversed stackable grid">
+                <!-- 列表中左边的文字， 占 11 格 -->
+                <div class="eleven wide column">
+                  <h3 class="ui header"> Spring Boot的消息事件机制 </h3>
+                  <p class="m-text">Spring Boot自带了消息机制，可以让我们在一个地方发布消息，多个地方同时接收消息并处理消息，当然这是在同一个JVM内存下进行的，不同的进程还需要使用MQ来实现。</p>
+                  <!-- 下面的作者、日期等显示， 也用 grid 来实现 -->
+                  <div class="ui grid">
+                    <!-- 左边占11格 -->
+                    <div class="eleven wide column">
+
+                      <!-- horizontal 表示竖着的ui列表 -->
+                      <div class="ui horizontal link list">
+
+                        <div class="item">
+                          <img src="https://unsplash.it/100/100?image=1" alt="" class="ui avatar image">
+                          <div class="content"><a href="#" class="header">jimLi</a></div>
+                        </div>
+                        <div class="item">
+                          <span class="m-text-size"><i class="calendar icon"></i>2020-4-25</span>
+                        </div>
+                        <div class="item">
+                          <span class="m-text-size"><i class="eye icon"></i>100</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="right aligned five wide column">
+                      <a href="#" target="_blank" class="ui teal basic label m-padded-mini">认知升级</a>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- 列表右边的图片占5格 -->
+                <div class="five wide column">
+                  <a href="#" target="_blank"></a>
+                  <!-- 从网站上面获取的图片地址， 图片大小为 800×400 -->
+                  <img src="https://unsplash.it/800/450?image=1" alt="" class="ui rounded image">
+                </div>
+              </div>
+            </div>
+          </div> 
+          <!-- 循环二 -->
+          <div class="ui attached segment">
+            <div class="ui padded vertical segment m-padded-tb-two">
+              <!-- 分16格 -->
+              <div class="ui mobile reversed stackable grid">
+                <!-- 列表中左边的文字， 占 11 格 -->
+                <div class="eleven wide column">
+                  <h3 class="ui header"> Spring Boot的消息事件机制 </h3>
+                  <p class="m-text">Spring Boot自带了消息机制，可以让我们在一个地方发布消息，多个地方同时接收消息并处理消息，当然这是在同一个JVM内存下进行的，不同的进程还需要使用MQ来实现。</p>
+                  <!-- 下面的作者、日期等显示， 也用 grid 来实现 -->
+                  <div class="ui grid">
+                    <!-- 左边占11格 -->
+                    <div class="eleven wide column">
+
+                      <!-- horizontal 表示竖着的ui列表 -->
+                      <div class="ui horizontal link list">
+
+                        <div class="item">
+                          <img src="https://unsplash.it/100/100?image=27" alt="" class="ui avatar image">
+                          <div class="content"><a href="#" class="header">jimLi</a></div>
+                        </div>
+                        <div class="item">
+                          <span class="m-text-size"><i class="calendar icon"></i>2020-4-25</span>
+                        </div>
+                        <div class="item">
+                          <span class="m-text-size"><i class="eye icon"></i>100</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="right aligned five wide column">
+                      <a href="#" target="_blank" class="ui teal basic label m-padded-mini">认知升级</a>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- 列表右边的图片占5格 -->
+                <div class="five wide column">
+                  <a href="#" target="_blank"></a>
+                  <!-- 从网站上面获取的图片地址， 图片大小为 800×400 -->
+                  <img src="https://unsplash.it/800/450?image=27" alt="" class="ui rounded image">
+                </div>
+              </div>
+            </div>
+          </div> 
+          <!-- 循环三 -->
+          <div class="ui attached segment">
+            <div class="ui padded vertical segment m-padded-tb-two">
+              <!-- 分16格 -->
+              <div class="ui mobile reversed stackable grid">
+                <!-- 列表中左边的文字， 占 11 格 -->
+                <div class="eleven wide column">
+                  <h3 class="ui header"> Spring Boot的消息事件机制 </h3>
+                  <p class="m-text">Spring Boot自带了消息机制，可以让我们在一个地方发布消息，多个地方同时接收消息并处理消息，当然这是在同一个JVM内存下进行的，不同的进程还需要使用MQ来实现。</p>
+                  <!-- 下面的作者、日期等显示， 也用 grid 来实现 -->
+                  <div class="ui grid">
+                    <!-- 左边占11格 -->
+                    <div class="eleven wide column">
+
+                      <!-- horizontal 表示竖着的ui列表 -->
+                      <div class="ui horizontal link list">
+
+                        <div class="item">
+                          <img src="https://unsplash.it/100/100?image=35" alt="" class="ui avatar image">
+                          <div class="content"><a href="#" class="header">jimLi</a></div>
+                        </div>
+                        <div class="item">
+                          <span class="m-text-size"><i class="calendar icon"></i>2020-4-25</span>
+                        </div>
+                        <div class="item">
+                          <span class="m-text-size"><i class="eye icon"></i>100</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="right aligned five wide column">
+                      <a href="#" target="_blank" class="ui teal basic label m-padded-mini">认知升级</a>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- 列表右边的图片占5格 -->
+                <div class="five wide column">
+                  <a href="#" target="_blank"></a>
+                  <!-- 从网站上面获取的图片地址， 图片大小为 800×400 -->
+                  <img src="https://unsplash.it/800/450?image=35" alt="" class="ui rounded image">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 循环四 -->
+          <div class="ui attached segment">
+            <div class="ui padded vertical segment m-padded-tb-two">
+              <!-- 分16格 -->
+              <div class="ui mobile reversed stackable grid">
+                <!-- 列表中左边的文字， 占 11 格 -->
+                <div class="eleven wide column">
+                  <h3 class="ui header"> Spring Boot的消息事件机制 </h3>
+                  <p class="m-text">Spring Boot自带了消息机制，可以让我们在一个地方发布消息，多个地方同时接收消息并处理消息，当然这是在同一个JVM内存下进行的，不同的进程还需要使用MQ来实现。</p>
+                  <!-- 下面的作者、日期等显示， 也用 grid 来实现 -->
+                  <div class="ui grid">
+                    <!-- 左边占11格 -->
+                    <div class="eleven wide column">
+
+                      <!-- horizontal 表示竖着的ui列表 -->
+                      <div class="ui horizontal link list">
+
+                        <div class="item">
+                          <img src="https://unsplash.it/100/100?image=33" alt="" class="ui avatar image">
+                          <div class="content"><a href="#" class="header">jimLi</a></div>
+                        </div>
+                        <div class="item">
+                          <span class="m-text-size"><i class="calendar icon"></i>2020-4-25</span>
+                        </div>
+                        <div class="item">
+                          <span class="m-text-size"><i class="eye icon"></i>100</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="right aligned five wide column">
+                      <a href="#" target="_blank" class="ui teal basic label m-padded-mini">认知升级</a>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- 列表右边的图片占5格 -->
+                <div class="five wide column">
+                  <a href="#" target="_blank"></a>
+                  <!-- 从网站上面获取的图片地址， 图片大小为 800×400 -->
+                  <img src="https://unsplash.it/800/450?image=33" alt="" class="ui rounded image">
+                </div>
+              </div>
+            </div>
+          </div>
+           
+
+          <!-- 底部翻页 -->
+          <div class="ui bottom attached segment">
+            <div class="ui middle aligned two column grid">
+              <div class="column">
+                <a href="#" class="ui mini basic teal button">上一页</a>
+              </div>
+              <div class="right aligned column">
+                <a href="#" class="ui mini basic teal button">下一页</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- 右边的内容 占 5 格 -->
+        <div class="five wide column">
+
+          <!-- 右边栏的分类栏 -->
+          <div class="ui segments">
+            <!-- secondary 使模块背景变成灰色 -->
+            <div class="ui secondary segment">
+              <div class="ui two column grid">
+                <div class="column"><i class="browser icon"></i>分类</div>
+                <div class="right aligned column">
+                  <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui teal segment">
+              <div class="ui attached fluid vertical menu">
+                <a href="#" class="item">
+                  学习日志
+                  <div class="ui teal basic left pointing label">20</div>
+                </a>
+                <a href="#" class="item">
+                  思考与感悟
+                  <div class="ui teal basic left pointing label">12</div>
+                </a>
+                <a href="#" class="item">
+                  清单
+                  <div class="ui teal basic left pointing label">15</div>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- 右边的标签栏 -->
+          <div class="ui segments m-margin-top">
+            <!-- secondary 使模块背景变成灰色 -->
+            <div class="ui secondary segment">
+              <div class="ui two column grid">
+                <div class="column"><i class="tags icon"></i>标签</div>
+                <div class="right aligned column">
+                  <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui teal segment">
+              <a href="#" class="ui teal basic left pointing label m-margin-tb-one">
+                jQuery <div class="detail">88</div>
+              </a>
+              <a href="#" class="ui teal basic left pointing label m-margin-tb-one">
+                spring <div class="detail">120</div>
+              </a>
+              <a href="#" class="ui teal basic left pointing label m-margin-tb-one">
+                react <div class="detail">23</div>
+              </a>
+              <a href="#" class="ui teal basic left pointing label m-margin-tb-one">
+                vue <div class="detail">46</div>
+              </a>
+              <a href="#" class="ui teal basic left pointing label m-margin-tb-one">
+                mysql <div class="detail">79</div>
+              </a>
+              <a href="#" class="ui teal basic left pointing label m-margin-tb-one">
+                oracle <div class="detail">123</div>
+              </a>
+              <a href="#" class="ui teal basic left pointing label m-margin-tb-one">
+                ssm <div class="detail">234</div>
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- 右边的最新推荐栏 -->
+          <div class="ui segments m-margin-top">
+            <div class="ui secondary segment">
+              <i class="bookmark icon"></i> 最新推荐
+            </div>
+
+            <div class="ui segment">
+              <a href="#" target="_blank" class="m-color m-text">springboot + rabbitmq发送邮件(保证消息100%投递成功并被消费)</a>
+            </div>
+            <div class="ui segment">
+              <a href="#" target="_blank" class="m-color m-text">spring boot 整合定时任务</a>
+            </div>
+            <div class="ui segment">
+              <a href="#" target="_blank" class="m-color m-text">RabbitMQ延迟消息的延迟极限是多少？</a>
+            </div>
+            <div class="ui segment">
+              <a href="#" target="_blank" class="m-color m-text">vavr：让你像写Scala一样写Java</a>
+            </div>
+
+          </div>
+
+          <!-- 右边的二维码 -->
+          <h4 class="ui horizontal divider header m-margin-top">扫码关注我</h4>
+          <div class="ui card m-img-size">
+            <img src="../static/images/ewm.jpg" alt="" style="width: 150px;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div style="height: 100px;"></div>
+
+  <!-- 底部 -->
+  <footer class="ui inverted vertical segment footer-padding-max">
+    <!-- container 定义一个容器 -->
+    <div class="ui center aligned container">
+      <!-- grid 将容器分为16个部分 -->
+      <div class="ui stackable inverted divided grid">
+        <!-- 设置分块， 分为四个模块， 设置每个模块的大小 -->
+        <div class="three wide column">
+          <img src="../static/images/ewm.jpg" class="ui rounded image ewm-img" alt="">
+        </div>
+
+        <div class="three wide column">
+          <h4 class="footer-text">最新博客</h4>
+          <!-- link list ui数组， item就是它下面的每个子元素 -->
+          <div class="ui inverted link list">
+            <a href="" class="item">springboot配置详解</a>
+            <a href="" class="item">mybatis深入</a>
+            <a href="" class="item">vue快速入门</a>
+            <a href="" class="item">用户故事集</a>
+          </div>
+        </div>
+
+        <div class="three wide column">
+          <h4 class="footer-text">联系我们</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Email : jimli@augmentum.com.cn</a>
+            <a href="#" class="item">QQ : 1514866310</a>
+          </div>
+        </div>
+        
+        <div class="seven wide column">
+          <h4 class="footer-text">介绍</h4>
+          <p class="introduce-footer">这是我学习springboot时开发的一款基于springboot的个人博客项目， 需要学习的同学可以联系我一起来进行探讨交流</p>
+        </div>
+      </div>
+      <!-- 一条分割线 -->
+      <div class="ui inverted section divider"></div>
+      <p class="footer-text">Development start time is @ 2020 - 4 - 25</p>
+    </div>
+  </footer>
+
+  <!-- 引入jquery 和 semantic -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+  <script>
+    // 在小屏幕或者手机端时，点击隐藏和显示上面的菜单
+    $("#control-hide").click(function() {
+      // .toggleClass控制class的添加和移除
+      $(".control-hide").toggleClass('m-monile-hide')
+    })
+  </script>
+  
+</body>
+</html>
