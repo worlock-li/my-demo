@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<!--抽取公共部分-->
+
+<!--抽取引入部分-->
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title}">Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../../static/lib/editmd/css/editormd.min.css" th:href="@{/lib/editmd/css/editormd.min.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" href="../static/css/mystyle.css" th:href="@{/css/mystyle.css}">
+</head>
+<body>
+
+<!--抽取导航部分-->
+<nav th:fragment="menu(n)" class="ui teal attached segment top-nav">
+
+    <div class="ui secondary stackable menu m-center">
+        <h3 class="ui teal header item">博客后台管理</h3>
+        <a th:href="@{/admin/blogs}" class="control-hide item m-monile-hide" th:classappend="${n==1} ? 'active'"><i class="home icon"></i> 博客</a>
+        <a th:href="@{/admin/types}" class="control-hide item m-monile-hide" th:classappend="${n==2} ? 'active'"><i class="list layout icon"></i> 分类</a>
+        <a th:href="@{/admin/tags}" class="control-hide item m-monile-hide" th:classappend="${n==3} ? 'active'"><i class="tag icon"></i> 标签</a>
+
+        <div class="right menu control-hide m-monile-hide">
+            <div class="ui orange dropdown item">
+                <div class="text">
+                    <img src="https://unsplash.it/100/100?image=65" class="ui avatar image" th:src="@{${session.user.avatar}}">
+                    <span th:text="${session.user.nickName}">tom</span>
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="#" th:href="@{/admin/logout}" class="item">注销</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a href="#" id="control-hide" class="ui icon button m-hide-position">
+        <i class="server icon"></i>
+    </a>
+</nav>
+
+<!-- 底部 -->
+<footer th:fragment="footer" class="ui inverted vertical segment footer-padding-max">
+    <!-- container 定义一个容器 -->
+    <div class="ui center aligned container">
+        <!-- grid 将容器分为16个部分 -->
+        <div class="ui stackable inverted divided grid">
+            <!-- 设置分块， 分为四个模块， 设置每个模块的大小 -->
+            <div class="three wide column">
+                <img src="../static/images/ewm.jpg" th:src="@{/images/ewm.jpg}" class="ui rounded image ewm-img" alt="">
+            </div>
+
+            <div class="three wide column">
+                <h4 class="footer-text">最新博客</h4>
+                <!-- link list ui数组， item就是它下面的每个子元素 -->
+                <div class="ui inverted link list">
+                    <a href="" class="item">springboot配置详解</a>
+                    <a href="" class="item">mybatis深入</a>
+                    <a href="" class="item">vue快速入门</a>
+                    <a href="" class="item">用户故事集</a>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="footer-text">联系我们</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email : jimli@augmentum.com.cn</a>
+                    <a href="#" class="item">QQ : 1514866310</a>
+                </div>
+            </div>
+
+            <div class="seven wide column">
+                <h4 class="footer-text">介绍</h4>
+                <p class="introduce-footer">这是我学习springboot时开发的一款基于springboot的个人博客项目， 需要学习的同学可以联系我一起来进行探讨交流</p>
+            </div>
+        </div>
+        <!-- 一条分割线 -->
+        <div class="ui inverted section divider"></div>
+        <p class="footer-text">Development start time is @ 2020 - 4 - 25</p>
+    </div>
+</footer>
+
+<th:block th:fragment="script">
+    <!-- 引入jquery 和 semantic -->
+    <script type="text/javascript" src="../static/js/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+    <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
+    <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
+    <script src="../static/lib/editmd/editormd.min.js" th:src="@{/lib/editmd//editormd.min.js}"></script>
+</th:block>
+
+
+</body>
+</html>

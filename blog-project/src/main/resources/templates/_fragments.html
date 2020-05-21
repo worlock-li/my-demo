@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<!--抽取公共部分-->
+
+<!--抽取引入部分-->
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title}">Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" href="../static/css/mystyle.css" th:href="@{/css/mystyle.css}">
+</head>
+<body>
+
+<!--抽取导航部分-->
+<nav th:fragment="menu(n)" class="ui attached segment top-nav">
+    <div class="ui secondary stackable menu m-center">
+        <!-- <h2 class="ui teal header item">博客</h2> -->
+        <img src="../static/images/blog(1).png" th:src="@{/images/blog(1).png}" alt=""
+             class="ui rounded image logo-img">
+        <a th:href="@{/}" class="control-hide item m-monile-hide" th:classappend="${n==1} ?'active'"><i class="home icon"></i> 首页</a>
+        <a th:href="@{/types/-1}" class="control-hide item m-monile-hide" th:classappend="${n==2} ?'active'"><i class="list layout icon"></i> 分类</a>
+        <a th:href="@{/tags/-1}" class="control-hide item m-monile-hide" th:classappend="${n==3} ?'active'"><i class="tag icon"></i> 标签</a>
+        <a th:href="@{/archvies}" class="control-hide item m-monile-hide" th:classappend="${n==4} ?'active'"><i class="clone icon"></i> 归档</a>
+        <a th:href="@{/about}" class="control-hide item m-monile-hide" th:classappend="${n==5} ?'active'"><i class="user icon"></i> 关于我</a>
+        <!-- 搜索栏 -->
+        <div class="control-hide right menu m-monile-hide">
+            <form name="search" method="post" action="#" th:action="@{/search}" target="_blank">
+                <div class="item">
+                    <div class="ui icon input">
+                        <input type="text" name="query" placeholder="Search..." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <a href="#" id="control-hide" class="ui icon button m-hide-position">
+        <i class="server icon"></i>
+    </a>
+</nav>
+
+
+<!-- 底部 -->
+<footer th:fragment="footer" class="ui inverted vertical segment footer-padding-max">
+    <!-- container 定义一个容器 -->
+    <div class="ui center aligned container">
+        <!-- grid 将容器分为16个部分 -->
+        <div class="ui stackable inverted divided grid">
+            <!-- 设置分块， 分为四个模块， 设置每个模块的大小 -->
+            <div class="three wide column">
+                <img src="../static/images/ewm.jpg" th:src="@{/images/ewm.jpg}" class="ui rounded image ewm-img" alt="">
+            </div>
+
+            <div class="three wide column">
+                <h4 class="footer-text">最新博客</h4>
+
+                <div id="newblogContainer">
+                    <!-- link list ui数组， item就是它下面的每个子元素 -->
+                    <div class="ui inverted link list" th:fragment="newBlogList">
+                        <a href="" th:href="@{/blog/{id}(id=${blog.id})}" class="item" th:each="blog : ${newBlogs}" th:text="${blog.title}">springboot配置详解</a>
+                        <!--/*-->
+                        <a href="" class="item">mybatis深入</a>
+                        <a href="" class="item">vue快速入门</a>
+                        <a href="" class="item">用户故事集</a>
+                        <!--*/-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="footer-text">联系我们</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email : jimli@augmentum.com.cn</a>
+                    <a href="#" class="item">QQ : 1514866310</a>
+                </div>
+            </div>
+
+            <div class="seven wide column">
+                <h4 class="footer-text">介绍</h4>
+                <p class="introduce-footer">
+                    基于springboot的个人博客项目 <br>
+                    所用技术：java，mysql，jpa，springboot，thymeleaf，jQuery，semantic ui <br>
+                    插件 ： editmd ： markdown编辑器， prism ： 代码高亮显示， qrcode ： 生成手机二维码，
+                    tocbot : 目录生成， typo ： 网页排版， animate ： 动画效果
+                </p>
+            </div>
+        </div>
+        <!-- 一条分割线 -->
+        <div class="ui inverted section divider"></div>
+        <p class="footer-text">Development start time in @ 2020 - 4 - 25</p>
+    </div>
+</footer>
+
+<!--script引入-->
+<th:block th:fragment="script">
+    <!-- 引入jquery 和 semantic -->
+    <script type="text/javascript" src="../static/js/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+    <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
+    <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
+    <script src="../static/lib/editmd/editormd.min.js" th:src="@{/lib/editmd//editormd.min.js}"></script>
+    <script>
+        $('#newblogContainer').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+    </script>
+</th:block>
+
+
+</body>
+</html>

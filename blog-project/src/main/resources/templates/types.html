@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="_fragments :: head(~{::title})">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博客分类</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <link rel="stylesheet" href="../static/css/mystyle.css">
+</head>
+
+<body class="qt-bg">
+  <!-- style="background-image: url(https://unsplash.it/1349/292?image=1073);" -->
+  <!-- 导航部分 -->
+  <!-- inverted 反色, attached将四个角变尖 -->
+  <nav th:replace="_fragments :: menu(2)" class="ui teal attached segment top-nav">
+
+    <div class="ui secondary stackable menu m-center">
+      <!-- <h2 class="ui teal header item">博客</h2> -->
+      <img src="../static/images/blog(1).png" alt="" class="ui rounded image logo-img">
+      <a class="control-hide item m-monile-hide"><i class="home icon"></i> 首页</a>
+      <a class="active control-hide item m-monile-hide"><i class="list layout icon"></i> 分类</a>
+      <a class="control-hide item m-monile-hide"><i class="tag icon"></i> 标签</a>
+      <a class="control-hide item m-monile-hide"><i class="clone icon"></i> 归档</a>
+      <a class="control-hide item m-monile-hide"><i class="user icon"></i> 关于我</a>
+      <!-- 搜索栏 -->
+      <div class="control-hide right menu m-monile-hide">
+        <div class="item">
+          <div class="ui icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" id="control-hide" class="ui icon button m-hide-position">
+      <i class="server icon"></i>
+    </a>
+  </nav>
+
+  <!-- 中间部分 -->
+  <div class="m-padded-tb-three m-conteiner">
+    <div class="ui container">
+
+      <!-- 头部 -->
+      <div class="ui top attached segment">
+        <!-- middle aligned 文字上下居中 -->
+        <div class="ui middle aligned two column grid">
+          <div class="column">
+            <h3 class="ui teal header">分类</h3>
+          </div>
+          <div class="right aligned column">
+            共<h3 class="ui orange header m-inline-block" th:text="${#arrays.length(types)}">&nbsp;14&nbsp;</h3>个
+          </div>
+        </div>
+      </div>
+
+      <!-- 分类标签栏 -->
+      <div class="ui attached segment">
+
+        <div class="ui labeled button m-margin-tb-one" th:each="type : ${types}">
+          <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="ui basic button" th:text="${type.name}" th:classappend="${type.id == activeTypeId} ? 'teal'">Jave</a>
+          <div class="ui basic left pointing label" th:text="${#arrays.length(type.blogs)}" th:classappend="${type.id == activeTypeId} ? 'teal'">12</div>
+        </div>
+
+        <!--/*-->
+        <!-- copy1 -->
+        <div class="ui labeled button m-margin-tb-one">
+          <a href="#" class="ui basic button">Jave</a>
+          <div class="ui basic left pointing label">23</div>
+        </div>
+        <!-- copy2 -->
+        <div class="ui labeled button m-margin-tb-one">
+          <a href="#" class="ui basic button">web</a>
+          <div class="ui basic left pointing label">5</div>
+        </div>
+        <!-- copy3 -->
+        <div class="ui labeled button m-margin-tb-one">
+          <a href="#" class="ui basic button">mysql</a>
+          <div class="ui basic left pointing label">2</div>
+        </div>
+        <!-- cope4 -->
+        <div class="ui labeled button m-margin-tb-one">
+          <a href="#" class="ui basic button">angular</a>
+          <div class="ui basic left pointing label">9</div>
+        </div>
+        <!-- copy5 -->
+        <div class="ui labeled button m-margin-tb-one">
+          <a href="#" class="ui basic button">Jave</a>
+          <div class="ui basic left pointing label">12</div>
+        </div>
+        <!--*/-->
+      </div>
+
+      <!-- 标签对应的博客列表 -->
+      
+      <div class="ui teal top attached segment">
+
+        <!-- 列表部分， 循环主体 -->
+        <div class="ui padded vertical segment m-padded-tb-two" th:each="blog : ${page.content}">
+          <!-- 分16格 -->
+          <div class="ui middle aligned mobile reversed stackable grid">
+            <!-- 列表中左边的文字， 占 11 格 -->
+            <div class="eleven wide column">
+              <h3 class="ui header">
+                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" class="m-color-black" th:text="${blog.title}">Spring Boot的消息事件机制</a>
+              </h3>
+              <p class="m-text" th:text="|${blog.description}....|">Spring Boot自带了消息机制，可以让我们在一个地方发布消息，多个地方同时接收消息并处理消息，当然这是在同一个JVM内存下进行的，不同的进程还需要使用MQ来实现。</p>
+
+              <!-- 下面的作者、日期等显示， 也用 grid 来实现 -->
+              <div class="ui grid">
+                <!-- 左边占11格 -->
+                <div class="eleven wide column">
+                  <!-- horizontal 表示竖着的ui列表 -->
+                  <div class="ui horizontal link list">
+                    <div class="item">
+                      <img th:src="@{${blog.user.avatar}}" src="https://unsplash.it/100/100?image=54" alt="" class="ui avatar image">
+                      <div class="content">
+                        <a href="#" class="header" th:text="${blog.user.nickName}">jimLi</a>
+                      </div>
+                    </div>
+                    <div class="item">
+                          <span class="m-text-size">
+                            <i class="calendar icon"></i>
+                            <span th:text="${#dates.format(blog.updateTime, 'yy-MM-dd')}">2020-4-25</span>
+                          </span>
+                    </div>
+                    <div class="item">
+                          <span class="m-text-size">
+                            <i class="eye icon"></i>
+                            <span th:text="${blog.views}">100</span>
+                          </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="right aligned five wide column">
+                  <a href="#" target="_blank" class="ui teal basic label m-padded-mini" th:text="${blog.type.name}">认知升级</a>
+                </div>
+              </div>
+            </div>
+            <!-- 列表右边的图片占5格 -->
+            <div class="five wide column">
+              <a href="#" target="_blank">
+                <!-- 从网站上面获取的图片地址， 图片大小为 800×400 -->
+                <img th:src="@{${blog.firstPicture}}" src="https://unsplash.it/800/450?image=14" alt="" class="ui rounded image">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 底部翻页 -->
+      <div class="ui bottom attached segment" th:if="${page.totalPages} > 1">
+        <div class="ui middle aligned two column grid">
+          <div class="column">
+            <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}" class="ui mini basic teal button">上一页</a>
+          </div>
+          <div class="right aligned column">
+            <a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui mini basic teal button">下一页</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div style="height: 100px;"></div>
+
+  <!-- 底部 -->
+  <footer th:replace="_fragments :: footer" class="ui inverted vertical segment footer-padding-max">
+    <!-- container 定义一个容器 -->
+    <div class="ui center aligned container">
+      <!-- grid 将容器分为16个部分 -->
+      <div class="ui stackable inverted divided grid">
+        <!-- 设置分块， 分为四个模块， 设置每个模块的大小 -->
+        <div class="three wide column">
+          <img src="../static/images/ewm.jpg" class="ui rounded image ewm-img" alt="">
+        </div>
+
+        <div class="three wide column">
+          <h4 class="footer-text">最新博客</h4>
+          <!-- link list ui数组， item就是它下面的每个子元素 -->
+          <div class="ui inverted link list">
+            <a href="" class="item">springboot配置详解</a>
+            <a href="" class="item">mybatis深入</a>
+            <a href="" class="item">vue快速入门</a>
+            <a href="" class="item">用户故事集</a>
+          </div>
+        </div>
+
+        <div class="three wide column">
+          <h4 class="footer-text">联系我们</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Email : jimli@augmentum.com.cn</a>
+            <a href="#" class="item">QQ : 1514866310</a>
+          </div>
+        </div>
+
+        <div class="seven wide column">
+          <h4 class="footer-text">介绍</h4>
+          <p class="introduce-footer">这是我学习springboot时开发的一款基于springboot的个人博客项目， 需要学习的同学可以联系我一起来进行探讨交流</p>
+        </div>
+      </div>
+      <!-- 一条分割线 -->
+      <div class="ui inverted section divider"></div>
+      <p class="footer-text">Development start time is @ 2020 - 4 - 25</p>
+    </div>
+  </footer>
+
+  <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+  <!-- 引入jquery 和 semantic -->
+  <script type="text/javascript" src="../static/js/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.js}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <!--/*/</th:block>/*/-->
+
+  <script>
+    // 在小屏幕或者手机端时，点击隐藏和显示上面的菜单
+    $("#control-hide").click(function () {
+      // .toggleClass控制class的添加和移除
+      $(".control-hide").toggleClass('m-monile-hide')
+    })
+  </script>
+
+</body>
+
+</html>

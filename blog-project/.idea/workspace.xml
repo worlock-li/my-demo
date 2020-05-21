@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="37c874fd-8fa8-4c7c-9725-e069b0a5c9e7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven1\repository" />
+        <option name="userSettingsFile" value="D:\maven1\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="jdk-1.8" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bD9bS3VAB3zNzMgSuvKkVrgLoi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\demo_file\idea-workspace\blog\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.stady.blog.web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\demo_file\idea-workspace\blog\src\main\resources\static\images" />
+      <recent name="E:\demo_file\idea-workspace\blog\src\main\resources\templates" />
+      <recent name="E:\demo_file\idea-workspace\blog\src\main\java\com\stady\blog\web" />
+      <recent name="E:\demo_file\idea-workspace\blog\src\main\java\com\stady\blog\web\admin" />
+      <recent name="E:\demo_file\idea-workspace\blog\src\main\resources\templates\admin" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BlogApplication">
+    <configuration name="Md5Utils" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.stady.blog.util.Md5Utils" />
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stady.blog.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="blog [dependency:purge-local-repository]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="dependency:purge-local-repository" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.stady.blog.BlogApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Md5Utils" />
+      <item itemvalue="Maven.blog [dependency:purge-local-repository]" />
+      <item itemvalue="Spring Boot.BlogApplication" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37c874fd-8fa8-4c7c-9725-e069b0a5c9e7" name="Default Changelist" comment="" />
+      <created>1588155868303</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588155868303</updated>
+      <workItem from="1588155875303" duration="3694000" />
+      <workItem from="1588210349279" duration="9647000" />
+      <workItem from="1588227369061" duration="4161000" />
+      <workItem from="1588470518247" duration="678000" />
+      <workItem from="1588486171022" duration="16698000" />
+      <workItem from="1588555453669" duration="7787000" />
+      <workItem from="1588583424159" duration="2930000" />
+      <workItem from="1588660102934" duration="442000" />
+      <workItem from="1588667544222" duration="11267000" />
+      <workItem from="1588729227196" duration="1508000" />
+      <workItem from="1588731429247" duration="97000" />
+      <workItem from="1588731940749" duration="1231000" />
+      <workItem from="1588742116144" duration="11092000" />
+      <workItem from="1588908641727" duration="295000" />
+      <workItem from="1588910627326" duration="6570000" />
+      <workItem from="1589069029706" duration="43000" />
+      <workItem from="1589179774310" duration="1598000" />
+      <workItem from="1589181436815" duration="201000" />
+      <workItem from="1589181712870" duration="15687000" />
+      <workItem from="1589245633868" duration="14190000" />
+      <workItem from="1589348368430" duration="9704000" />
+      <workItem from="1589420354216" duration="157000" />
+      <workItem from="1589420577462" duration="540000" />
+      <workItem from="1589431455257" duration="1617000" />
+      <workItem from="1589506341606" duration="26223000" />
+      <workItem from="1589597823430" duration="7170000" />
+      <workItem from="1589615729174" duration="12752000" />
+      <workItem from="1589683510494" duration="24571000" />
+      <workItem from="1589765795288" duration="4640000" />
+      <workItem from="1589774844814" duration="15508000" />
+      <workItem from="1589856003479" duration="26954000" />
+      <workItem from="1589938269149" duration="31211000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="25" key="#Assign_Data_Sources" timestamp="1589965810590">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="25" key="#Assign_Data_Sources/0.0.1366.728@0.0.1366.728" timestamp="1589965810590" />
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589964397205">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1589964397205" />
+    <state x="884" y="472" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1589181375849">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="884" y="472" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.728@0.0.1366.728" timestamp="1589181375849" />
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1589961375531">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589961375531" />
+    <state x="192" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589275222433">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="192" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1589275222433" />
+    <state x="445" y="103" key="FileChooserDialogImpl" timestamp="1589627669736">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589627669736" />
+    <state width="1323" height="287" key="GridCell.Tab.0.bottom" timestamp="1589983192699">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589983192699" />
+    <state width="1323" height="287" key="GridCell.Tab.0.center" timestamp="1589983192698">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589983192698" />
+    <state width="1323" height="287" key="GridCell.Tab.0.left" timestamp="1589983192697">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589983192697" />
+    <state width="1323" height="287" key="GridCell.Tab.0.right" timestamp="1589983192698">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589983192698" />
+    <state width="1323" height="287" key="GridCell.Tab.1.bottom" timestamp="1589983192700">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589983192700" />
+    <state width="1323" height="287" key="GridCell.Tab.1.center" timestamp="1589983192699">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589983192699" />
+    <state width="1323" height="287" key="GridCell.Tab.1.left" timestamp="1589983192699">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589983192699" />
+    <state width="1323" height="287" key="GridCell.Tab.1.right" timestamp="1589983192699">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589983192699" />
+    <state width="1323" height="287" key="GridCell.Tab.2.bottom" timestamp="1589983192701">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589983192701" />
+    <state width="1323" height="287" key="GridCell.Tab.2.center" timestamp="1589983192700">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1589983192700" />
+    <state width="1323" height="287" key="GridCell.Tab.2.left" timestamp="1589983192700">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1589983192700" />
+    <state width="1323" height="287" key="GridCell.Tab.2.right" timestamp="1589983192701">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="287" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1589983192701" />
+    <state x="262" y="20" width="994" height="708" key="SettingsEditor" timestamp="1589622541377">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="262" y="20" width="994" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589622541377" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589620275722">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1589620275722" />
+    <state x="57" y="68" key="new project wizard" timestamp="1589627766363">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="57" y="68" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1589627766363" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1589972380352">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1589972380352" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1589947442200">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1589947442200" />
+  </component>
+</project>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/mystyle.css">
+</head>
+<body>
+<!-- style="background-image: url(https://unsplash.it/1349/292?image=1073);" -->
+<!-- 导航部分 -->
+<!-- inverted 反色 -->
+<nav th:replace="_fragments :: menu(1)" class="ui teal attached segment top-nav">
+
+    <div class="ui secondary stackable menu m-center">
+        <!-- <h2 class="ui teal header item">博客</h2> -->
+        <img src="../../static/images/blog(1).png" alt=""
+             class="ui rounded image logo-img">
+        <a class="active control-hide active item m-monile-hide"><i class="home icon"></i> 首页</a>
+        <a class="control-hide item m-monile-hide"><i class="list layout icon"></i> 分类</a>
+        <a class="control-hide item m-monile-hide"><i class="tag icon"></i> 标签</a>
+        <a class="control-hide item m-monile-hide"><i class="clone icon"></i> 归档</a>
+        <a class="control-hide item m-monile-hide"><i class="edit icon"></i> 发布博客</a>
+        <a class="control-hide item m-monile-hide"><i class="user icon"></i> 关于我</a>
+        <!-- 搜索栏 -->
+        <div class="control-hide right menu m-monile-hide">
+            <div class="item">
+                <div class="ui icon input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" id="control-hide" class="ui icon button m-hide-position">
+        <i class="server icon"></i>
+    </a>
+</nav>
+
+<div class="m-conteiner-one m-padded-tb-four">
+    <div class="ui error message m-padded-tb-four">
+        <div class="ui conteiner">
+            <h2>500</h2>
+            <p>服务器内部错误</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- 底部 -->
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment footer-padding-max">
+    <!-- container 定义一个容器 -->
+    <div class="ui center aligned container">
+        <!-- grid 将容器分为16个部分 -->
+        <div class="ui stackable inverted divided grid">
+            <!-- 设置分块， 分为四个模块， 设置每个模块的大小 -->
+            <div class="three wide column">
+                <img src="../../static/images/ewm.jpg" class="ui rounded image ewm-img" alt="">
+            </div>
+
+            <div class="three wide column">
+                <h4 class="footer-text">最新博客</h4>
+                <!-- link list ui数组， item就是它下面的每个子元素 -->
+                <div class="ui inverted link list">
+                    <a href="" class="item">springboot配置详解</a>
+                    <a href="" class="item">mybatis深入</a>
+                    <a href="" class="item">vue快速入门</a>
+                    <a href="" class="item">用户故事集</a>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="footer-text">联系我们</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email : jimli@augmentum.com.cn</a>
+                    <a href="#" class="item">QQ : 1514866310</a>
+                </div>
+            </div>
+
+            <div class="seven wide column">
+                <h4 class="footer-text">介绍</h4>
+                <p class="introduce-footer">这是我学习springboot时开发的一款基于springboot的个人博客项目， 需要学习的同学可以联系我一起来进行探讨交流</p>
+            </div>
+        </div>
+        <!-- 一条分割线 -->
+        <div class="ui inverted section divider"></div>
+        <p class="footer-text">Development start time is @ 2020 - 4 - 25</p>
+    </div>
+</footer>
+
+</body>
+</html>
